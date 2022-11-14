@@ -1,0 +1,9 @@
+[package]
+name = "scheduler"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ferdinand Keller"]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+time = { version = "0.3", features = ["std"] }
