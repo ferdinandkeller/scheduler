@@ -1,6 +1,18 @@
 //! # Scheduler for the [Rust] programming language.
 //! 
+//! The goal of this crate is to provide a simple and efficient way to schedule tasks. The need came from a necessity to schedule tasks at a specific time in a project I'm working on at work. This crate allows you to create a schedule using the classic cron syntax, and then provides many useful methods like :
+//! - `next_occurrence` : returns the next occurrence of the schedule after a given date
+//! - `previous_occurrence` : returns the previous occurrence of the schedule before a given date
+//! - `matches` : returns true if the schedule matches a given date
+//! and many more.
 //! 
+//! ## How to use it
+//! 
+//! ## How the project is structured
+//! ### lib.rs
+//! ### time_extensions.rs
+//! ### error.rs
+//! ### test.rs
 
 // use the time crate for timekeeping
 use time::OffsetDateTime;
@@ -30,12 +42,12 @@ pub struct Schedule {
 }
 
 impl Schedule {
-    /// create a new schedule
+    /// create a new schedule from a cron string
     /// 
     /// # Arguments
     /// - `expression`: a string representing the schedule
     /// 
-    /// # Example
+    /// # Examples
     /// ```
     /// use scheduler::Schedule;
     /// 
